@@ -1,101 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 /**/
+
 body{
-    background-image: url('background.jpg');
-    background-attachment: fixed;
-    font-family: 'Google Serif Bree', serif;  
-   ;
+    background-image: url('background.jpg'); /* רקע הדף כולו */
+    background-attachment: fixed; /*הרקע לא זזה ומתפרשת על כל סמך כשהוא חוזר על עצמו*/
+    font-family: 'Serif Bree', serif;  /* הפונט של טקסט התוכן */
+    width: 80%; /* רוחב המקטע במסמך */
+    margin: 0 auto; /**/
+    padding: 0.3% 0; /* שוליים עיליונים ותלתונים */
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2); /* צללית אופקית ואנכית עם הצבע*/
+    border-radius: 10px 10px 0 0x; /*הרדיוס*/
+   
 }
-.Alaa{
+.Alaa {
+    background-color: white;
+    display: block;
+    font-family: 'Serif Bree', serif;  /* הפונט של טקסט התוכן */
+}
+/*.Alaa{
     width: 80%;
     margin: 0 auto;
     padding: 0.3% 0;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.2);
-}
+    border-radius: 10px 10px 0 0x; 
+}*/
 .one{
-    background: url('banner.png') no-repeat;
-    height: 350px;
-    background-size: 100%;
-    margin-left: 2%;
+    height: 350px;/* הגובה של המיכל החיצוני   */
+    background: url('banner.png') no-repeat;/*תמונת רקע שלא חוזרת על עצמה. */
+    width: 100%; /* התמונה מתפרסת על 100% של המכיל*/
+    background-size: cover; /* התמונה מופיעה בהשלמותה בתוך המכיל*/
     position: relative;
-}
-.one div{
- padding: 10px ;
- margin: 10px;
-}
-h1{
-background-color: #ffffff;
-text-align: center;
+    margin: 0 auto;
+   /* padding: 0% 0% 0% 2%; /* אם עשיתי את זה אז התמונה תיצא מחוץ הקופסא*/
 }
 
 .two{
-    position: relative;
-    top: 70%;
-    left: -2%;
+    position: relative;/*המיקום של אלמנט ביחס למיקום המקורי בעמוד שבו הוא ממוקם. */
+    top: 70%;/* שוליים עליונים */
+    left: -2%;/*שוליים שמליים*/
   
 }
-
+/*.one div{
+ padding: 10px ;
+ margin: 10px;
+}
+*/
 .dog {
-    border: 10px solid #fff;
-    border-radius: 200px;
-    width: 200px;
-    height: 200px;
+    border: 10px solid #fff; /* מסגרת לבנה ברוחב 10*/
+    border-radius: 200px; /* מעוצבת כעיגול בקןטר הזה*/ 
+    width: 200px; /*  אם הקוטר 200פקסל שמתי שרוחב 200*/
+    height: 200px;/* אם הקוטר 200 פקסל גם כאן שמתי שהגובה 200*/
+    position: absolute;/* המיקום שייקבע ביחס לאלמנט הקרוב ביותר שבתוכו מופיע באופן יחסי*/
 }
-
+    
 h1{
-        font-size: 3vw; 
-        margin: 20px 0; 
-        padding-top: 10px;
-        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3); 
-        border-radius: 3px;
-        font-family: 'Rammetto-One' ,'Cursive';
-    
+        font-size: 3vw; /*הגודל של הכותרת*/
+        font-family: 'Rammetto-One' ,'Cursive'; /* הפונט*/
+        padding-top: 10px;/*ריפוד עליון */
+        text-shadow: 3px 3px 0px #999999; /*צללית טקסט אנכית ואופקית עם הצבע*/
+        border-radius: 1px;/*רדיוס פיזור*/
+        text-align: center;/* הכותרת צריכה להיות באמצע על פי שמה שמופיע בתמונה*/
+        background-color: white;  /*הרקע של הקוטרת צריך להיות לבן כפי שמופיע בתמונה*/
     }
-table{
-    background-color: #fff;
+
+.text{
+   
+    display: grid;
+    padding: 2% 5% 2% 5%;
+    font-family: 'Serif Bree', serif;  /* הפונט של טקסט התוכן */
+     grid-template-columns: auto 0 auto ;
 }
-#left-column {
-    flex: 1;
-    padding-right: 20px;
-  }
 
-  #right-column {
-    flex: 2;
-  }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
+.text2, .text3 ,.text4 ,.text5 ,.text6{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 40%;
+ 
+   
+}
 
-  table, th, td {
-    border: 1px solid #ddd;
-    background-color: #ddd;
+.Yael{ 
+
+   width: 30vw;
+      max-height: 600px;
+      object-fit: cover;
+    min-width: 400px;
+   object-position:  right bottom;
+   width: 40%;    
+  
+  
+
+     
+   
+}
+
+
+
+.box1{
+    background: url('clouds.webp');
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row-reverse;
+
+
+
+        
+}
+
+.box2{
+    width: 50%;
+    display: flex;
+    flex-direction: column; /* הצגת הפריטים בטור אחד */
+    justify-content: center; /* מרכז התוכן אנכית */
+    align-items: center;
     
-  }
-
-  th, td {
-    padding: 12px;
-    text-align: left;
-  }
-
-  th {
-    background-color: #333;
-    color: #fff;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+ 
+    
 
 
+}.box5 {
+  
+    border-left: 10px solid #cccaca; /* מסגרת ברוחב px10 בצבע cccaca */
+    background-color: #ffffff; /* רקע לבן */
+    padding-bottom: 15px; /* שוליים תחתונים של px15 */
+    margin: 10px 0; /* ריפוד של px10 בכל הצדדים */
+    text-align: center;
+    padding-left: 40%;
+    width: 90%;
+    font-family: 'Serif Bree', serif;  /* הפונט של טקסט התוכן */
+    padding-left: 15px;
+   
+    
+
+ 
+ }
+.line{
+    width: 40%;
+    
+}
+.box3{
+    width: 50%;    
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: end;
+   
+
+}
+
+.DOG{
+    object-position: center;
+   
+}
 
 
-/**/
-/**/
+
+.p{
+    display: flex;
+    text-align: center;
+}
+
+
+   
+.pic h2{
+border-style: hiidden;
+font-size: 3vw;
+font-family: 'Rammetto-One' ,'Cursive';  
+text-transform: uppercase;
+text-align: center;
+font-weight: bold; /* גופן מודגש */
+}
+.pic{
+    margin-top: 20px; /* מרווח מלמעלה */
+    text-align: center; /* מרכז יחסי את כל האלמנטים במרחב עצמו */  
+    object-position: center;
+
+}
+.friend{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;  
+   margin: 10px;
+
+
+}
+.friend img {
+    width: 200px; /* רוחב התמונה - 200px */
+        height: 300px; /* גובה התמונה - 300px */
+        margin-bottom: 10px; /* שוליים למטה */
+        margin-right: 10px; 
+}
+.zefat{
+    background-color: #5f5b5b; /* צבע הרקע */
+    padding: 10px; /* ריפוד מכל הצדדים */
+    color: black; /* צבע הטקסט */
+    font-weight: bold; /* גופן מודגש */
+    text-align: center; /* מרכוז טקסט אופקית */
+}
+/*font-family: 'Rammetto-One' ,'Cursive';
+ .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}*/
+
 /**/
 /**/
